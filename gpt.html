@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transportes TransportVan S.A. - Servicios Logísticos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0044cc;
+            --secondary-color: #00bfff;
+            --accent-color: #00ff99;
+            --background-color: #f9f9f9;
+            --text-color: #333;
+            --info-box-bg: #f1f1f1;
+            --info-box-border: #ddd;
+            --footer-bg: #333;
+            --whatsapp-bg: #25D366;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        .header-info {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.8em;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .header-info p {
+            margin: 0;
+            display: inline-block;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            top: -20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+        .header-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .header-title h1 {
+            font-size: 2.5em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            color: var(--secondary-color);
+        }
+        .header-title h2 {
+            font-size: 1.2em;
+            margin: 0;
+            color: var(--accent-color);
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            font-size: 1.2em;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        .social-links-header {
+            display: flex;
+            gap: 15px;
+            font-size: 24px;
+        }
+        .social-links-header a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-links-header a:hover {
+            color: var(--accent-color);
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .section {
+            padding: 20px 0;
+        }
+        .section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .section p {
+            color: var(--text-color);
+        }
+        .hero {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 30%;
+            max-width: 30%;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            position: relative;
+        }
+        .service-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .service-card img {
+            max-width: 100px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-top: 20px;
+        }
+        .service-card p {
+            color: var(--text-color);
+        }
+        .info-boxes {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .info-box {
+            background-color: var(--info-box-bg);
+            border: 1px solid var(--info-box-border);
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1;
+        }
+        .info-box.right {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2em;
+        }
+        .info-box.right h3 {
+            font-size: 1.5em;
+        }
+        footer {
+            background-color: var(--footer-bg);
+            padding: 15px 0;
+            text-align: center;
+            color: #fff;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .social-links-footer {
+            margin: 10px 0;
+        }
+        .social-links-footer a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .social-links-footer a:hover {
+            color: #0033aa;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp-bg);
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+        .whatsapp-button a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info .whatsapp-button {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-info">
+        <p>Horarios: Las 24 horas del día | Llámanos al <a href="tel:+56940647891" style="color: #fff; text-decoration: none;">+569 40647891</a> o escríbenos: <a href="mailto:boris.ponce@gmail.com" style="color: #fff; text-decoration: none;">boris.ponce@gmail.com</a></p>
+    </div>
+    <header>
+        <div class="header-title">
+            <h1>Transportes TransportVan S.A.</h1>
+            <h2>Servicios Logísticos</h2>
+        </div>
+        <nav class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#contact">Contacto</a>
+            <a href="#about">Nosotros</a>
+            <a href="#blog">Blog</a>
+        </nav>
+        <div class="social-links-header">
+            <a href="https://wa.me/56940647891" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/TransportVan" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/TransportVan" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/transportvan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a
